@@ -1,0 +1,149 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <div style="height: 20px;"></div>
+    
+    <h1>Place An Appointment</h1>
+    <div style="height: 40px;"></div>
+    <form>
+        <div class="form-row col-md-6">
+        <div class="form-group col-md-4">
+          <label for="exampleInputEmail1">Name</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your name">
+          
+        </div>
+        <div class="form-group col-md-4">
+          <label for="exampleInputPassword1">Age</label>
+          <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Enter your Age">
+        </div>
+    </div>
+    <div class="form-row col-md-6">
+        <div class="form-group col-md-4">
+            <label for="exampleInputPassword1">Email</label>
+            <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Enter your Email">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="exampleInputPassword1">Mobile Number</label>
+            <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Enter your number">
+          </div>
+        </div>
+          <div class="form-group col-md-6">
+            <label for="exampleInputPassword1">Address Line 1</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Address line 1">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="exampleInputPassword1">Address Line 2</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Address line 2">
+          </div>
+          <div class="form-row col-md-6">
+          <div class="form-group col-md-6">
+            <label for="exampleInputPassword1">City</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter your City">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="exampleInputPassword1">State</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter your State">
+          </div>
+        </div>
+        <div class="form-row col-md-6">
+          <div class="form-group col-md-4">
+            <label for="exampleInputPassword1">Country</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter your Country">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="exampleInputPassword1">Pincode</label>
+            <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Enter your Pincode">
+          </div>
+        </div>
+          <div class="form-group col-md-6">
+            <label for="exampleInputPassword1">Trainer Perference</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                <label class="form-check-label" for="exampleRadios1">
+                  Male
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                <label class="form-check-label" for="exampleRadios2">
+                  Female
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" >
+                <label class="form-check-label" for="exampleRadios3">
+                  No Perference
+                </label>
+              </div>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="exampleInputPassword1">Do you need Physiotherapist</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                <label class="form-check-label" for="exampleRadios1">
+                  Yes
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                <label class="form-check-label" for="exampleRadios2">
+                  No
+                </label>
+              </div>
+             
+          </div>
+          <div class="form-group col-md-6">
+            <label for="exampleInputPassword1">Select Package</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" (click)="toggle2()" checked>
+                <label class="form-check-label" for="exampleRadios1">
+                  One time appointment(Rs. 500/-)
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" (click)="toggle()">
+                <label class="form-check-label" for="exampleRadios2">
+                  4 session per week(Rs. 400/- per session) 
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" (click)="toggle3()">
+                <label class="form-check-label" for="exampleRadios3">
+                    5 session per week(Rs. 300/- per session) 
+                </label>
+              </div>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="exampleInputPassword1">Weeks</label>
+            <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Enter Weeks" [disabled]="textBoxDisabled" (keyup)="onKey($event)">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="exampleInputPassword1">Amount</label>
+            <input type="number" class="form-control" id="exampleInputPassword1"  [value]="amount">
+          </div>
+        <br>
+        <div class="form-row col-md-8">
+
+            <div></div>
+            <button (click)="cool()" type="submit" class="btn btn-primary ">Submit</button>
+        </div>
+        
+      </form>
+      <div style="height: 140px;"></div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+  </html>
